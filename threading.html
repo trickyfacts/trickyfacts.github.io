@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Intro to multithreading in python</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="Icon" href="Logo.png" type="png">
+        <meta name="view port" content="width=device-width ,initial-scale=1, minimum-scale=1">
+        <meta name="keywords" content="threading, multithreading, python">
+        <meta name="description" content="Run your code faster, smoother with multithreading. It will also prevent application not responding problem. So, what are you waiting for? checkout my content.">
+        <meta name="Developer" content="Nahid">
+    </head>
+    <body>
+        <div id="top-header">
+            <h2 style="text-align: left; font-family: calibri; top: 100px; font-size: 30pt;float: left; top: -34px; position: relative; font-weight: 20; color: white; margin-left: 10px;">Tricky facts</h2>
+            <a id="button" class="button" href="#">Ask question</a>
+            <a id="button2" class="button2" href="#">Comment</a>
+           
+        </div><br><br>
+        <h1 style="text-align: center; font-size: 25pt; font-weight: 10; font-family: calibri;">Tricky facts</h1>
+        <div id="links">
+            <a href="https://trickyfacts.github.io" style="color:black; font-family:caliblri; margin:0;" title="Tricky facts home">Home</a>
+            <a href="https://trickyfacts.github.io/about" style="color: black; font-family: calibri; margin:0; word-spacing: 2pt; " title="about tricky facts">About us</a>
+            <a href="mailto:nahidkhan01764@outlook.com" style="color: black; font-family: calibri; margin:0; word-spacing: 2pt;" title="Email us to contacts us">Contact us</a>
+            <a href="https://trickyfacts.github.io/contribute" style="color: black; font-family: calibri; margin:0; word-spacing: 2pt; " title="Contribute to our website. send your content.">Contribute</a>
+        </div>
+        <center><img src="images/pw.png" alt="Tricky facts banner" style="margin: auto; width: 90%;"></center><br><br>
+        <h1 style="font-family: calibri; text-align: center;">Your requested content is here</h1>
+
+        <div id="content"><div style="margin: 15pt;">
+            <h1 style="font-size: 30pt; font-family: calibri; color: black;">Intoduction to python threading</h1>
+            <p style="font-size: 15pt; font-family: calibri;">
+                Hello, guys. Now I am going to talk about python threading. It is a really interesting stuff. Hope you will like it.
+            </p>
+            <h2 style="font-size: 30pt; font-family: calibri; color: black;">What is threading?</h2>
+            <p style="font-size: 15pt; font-family: calibri;">
+                Before we start working with threading, we have to learn what is thread. So now you have made a really interesting python programme.
+                Like imagine you have made a code which prints "Hello" five times and prints "World" five times. and you have added them in two different
+                functions. Like below
+            </p>
+            <center><img src="images/thread-code.jpg" alt="A simple python code which prints Hello and world 5 times" style="margin: auto;"></center>
+            <p style="font-size: 15pt; font-family: calibri;">
+                Here your computer has to do two tasks one is printing "Hello" for five times and printing "World" for five times. Each of these tasks are called
+                thread. Our computer always handling a lot of threads. Like if you open your task manager you can see How many threads your computer is handling.
+            </p>
+            <center><img src="images/task_manager.jpg" alt="Task manager view where you will find how many threads your pc is handling"></center>
+            <p style="font-size: 15pt; font-family: calibri;">
+                Like in my computer, it is handling 2250 threads! Nowadays we have multicore cpus. It means we have more than one core in our cpu.
+                You can also find it in your task manager. In my computer, I have 4 cores in my cpu.  
+            </p>
+            <p style="font-size: 15pt; font-family: calibri;">
+                By default in python, If you write a long code with a lots of tasks it will be considered as a single thread which is called "main thread". It means your code will run on 
+                a single of your cpu. As a result your code could lag, stop responding or also could run slow. But with multithreading we can actually
+                divide our code and run it on different cores thus it will not lag and will run faster.   
+            </p>
+            <h2 style="font-size: 30pt; font-family: calibri; color: black;">Multithreading in python</h2>
+            <p style="font-size: 15pt; font-family: calibri;">
+                To do multithreading, we are going to use a module named "threading". It is a built in module in python. So you don't have to install it.
+                Now take a look at this code below. 
+            </p>
+            <center><img src="images/thread-code2.jpg" alt="A python code where I used threading"></center>
+            <p style="font-size: 15pt; font-family: calibri;">
+                Now first run the code without thraeding (showed at begining). Then run the code above. See outputs.
+            </p>
+            <center><img src="images/tout.png" alt="Compare two codes, one with thread and one without thread"></center>
+            <p style="font-size: 15pt; font-family: calibri;">
+                In the left picture (the one we used threading), it printed "Hello" and then after one "Hello" , it printed "world". In the right(without threading)
+                it printed "Hello" five times and after five "Hello" it printed "world" five times. So, hello() and world() function were running parallely.
+                It means hello() function was running on processor1 and world() function was running on processor2.
+            </p>
+            <center><img src="images/thread-dia.png" alt="This is how thread works"></center>
+            <p style="font-size: 15pt; font-family: calibri;">
+                You will also notice that I have used "time" module in 
+                my code. Well don't worry about it. I used it to slower code execution process using "time.sleep()" because our cpu is really fast and it will execute the code so fast that 
+                you will not understand what is actually happening. Now I am going to show you some important stuffs of threading module.
+            </p>
+            <h2 style="font-size: 30pt; font-family: calibri; color: black;">The threading module</h2>
+            <center><img src="images/thread-code2.jpg" alt="Python code with thread" style="margin: auto;"></center>
+            <p style="font-size: 15pt; font-family: calibri;">
+                <ul style="font-size: 15pt; font-family: calibri;">
+                in my previous code (the code where I used threading module) I've showed how I used the threading module. Now I am going describe it.<br>
+                <li>At first, I have imported the python threading module.</li>
+                <li>Then I have defined two functions named hello() and world().</li>
+                <li>Then I defined two variables named t1 and t2.</li>
+                <li>in t1  I have written thread.Threading().Inside thread.Threading, you will see "target". Here you have to write the name of the 
+                function which you are going to specify it as a different thread. It means the function which going to run in a different core.</li>
+                <li>in name you can name your thread like I have named it thread1</li>
+                <li>Then you just have to start your thread by calling variabl name.start(). In my code I've defined my thread as t1 so I written t1.start()</li>
+                <li>You can also run your mainthread alongside thread1 and thread2. But the main thread will run first then the external threads. If you want your external thread to 
+                    run first you just have to write t1.join() (according to my code).
+                </li>
+            </p>
+            
+            <h1 style="color: black;">Ask & Contribute</h1>
+            <p style="font-size: 15pt; font-family: calibri;"> if you have any question, don't hesitate to ask it. Email your question
+                <a href="mailto:thunderstorm01764@gmail.com" title="Click to email your question"><font color="black"><u>here</u></font></a> or you can just hit the "Ask question" button at the top of this page and we will be there to help you. You 
+                can also contribute in this page by writting your own content. Just email your content <a href="mailto:nahidkhan01764@outlook.com" style="color:black;">here</a>. 
+                Thanks for visiting my website.
+            </p>
+        </div>
+    </div>
+            
+        <center>
+            <div style="height:400px ; width: 80%;">
+            <h3 style="font-family: calibri; font-weight: 10; text-align: left;">Recent contents</h3>
+            <div style="height: max-content; width: 210px; float: left; border: solid black 1pt;">
+                <a href="https://trickyfacts.github.io/How-to-convert-python-files-to-exe-using-cx_freeze-module" title="How to convert python files to exe using the cx-freeze module">
+                <div style="height: 170px; width: 210px; background-image: url(images/blog1.jpg); background-size: 100%; background-repeat: no-repeat;"></div>
+                <h3 style="font-family: calibri; margin: 3pt;font-weight: lighter; text-align: left; border-bottom: solid black 1pt; height: 70px;">How to convert .py files to. exe using cx_freeze</h3>
+                <h3 style="font-family: calibri; font-weight: 10; text-align: left; height: max-content;">Date Created: 11 Nov 2020</h3>
+            </a>
+            </div>
+            <div style="height: max-content; width: 210px; float: left; border: solid black 1pt; margin-left: 10pt;">
+                <a href="https://trickyfacts.github.io/How-to-convert-python-files-to-exe-using-auto-py-to-exe" title="How to convert python files to exe using the auto py to exe module">
+                <div style="height: 170px; width: 210px; background-image: url(images/comp1.jpg); background-size: 100%;"></div>
+                <h3 style="font-family: calibri; margin: 3pt;font-weight: lighter; text-align: left; border-bottom: solid black 1pt; height: 70px;">Intro to python threading</h3>
+                <h3 style="font-family: calibri; font-weight: 10; text-align: left; height: max-content;">Date Created: 11 Nov 2020</h3>
+            </a>
+            </div>
+        </div></center>
+        <center><div id="comment-box" style=" width: 100%; height: 450px; margin-bottom: 30pt; background-color: antiquewhite;padding-top: 10px;">
+            <form action="https://formspree.io/f/xvovqbpj" method="post" accept-charset="UTF-8">
+                <h1 style="font-family: segoe ui; font-weight: 10;">Leave a comment !</h1>
+                <input style="width: 800px; height: 40px;" id="email" name="text" type="text" placeholder="Write your name" />
+                <input style="width: 800px; height: 40px; margin-top: 10pt;" id="email" name="email" type="email" placeholder="Write your email" />
+                <textarea style="width: 800px; height: 150px; margin-top: 10pt; font-family: segoe ui;" class="comment" name="comment" type="text" placeholder="Comment"></textarea>
+                <input  style="width: 800px; height: 40px; margin-top: 10pt; color: white; background-color: black;" id="submit" name="submit" type="Submit" />
+            </form>
+    
+        </div></center>
+        
+        <div class="bg-modal" style="display: none;">
+            <div class="modal-content">
+                <div class="close">+</div>
+                <form action="https://formspree.io/f/xvovqbpj" method="post" accept-charset="UTF-8">
+                    <h2 style="font-family: segoe ui; font-weight: 10; text-align: center;">Ask any question</h2>
+                    <input style="width: 80%; height: 40px;" id="email" name="text" type="text" placeholder="Write your name" />
+                    <input style="width: 80%; height: 40px; margin-top: 10pt;" id="email" name="text" type="email" placeholder="Write your Email address" />
+                    <textarea style="width: 80%; height: 100px; margin-top: 10pt; font-family: segoe ui;" class="comment" name="question" type="text" placeholder="Your question"></textarea>
+                    <input  style="width: 80%; height: 40px; margin-top: 10pt; color: white; background-color: black;" id="submit" name="submit" type="Submit" />
+                </form>
+            </div>
+        </div>
+        <div class="bg-modal2" style="display: none;">
+            <div class="modal-content2">
+                <div class="close2">+</div>
+                <form action="https://formspree.io/f/xvovqbpj" method="post" accept-charset="UTF-8">
+                    <h2 style="font-family: segoe ui; font-weight: 10; text-align: center;">Write a comment and help us improve</h2>
+                    <input style="width: 80%; height: 40px;" id="email" name="text" type="text" placeholder="Write your name" />
+                    <input style="width: 80%; height: 40px; margin-top: 10pt;" id="email" name="text" type="email" placeholder="Write your Email address" />
+                    <textarea style="width: 80%; height: 100px; margin-top: 10pt; font-family: segoe ui;" class="comment" name="question" type="text" placeholder="Write your comment here"></textarea>
+                    <input  style="width: 80%; height: 40px; margin-top: 10pt; color: white; background-color: black;" id="submit" name="submit" type="Submit" />
+                </form>
+            </div>
+        </div>
+        <script src="engine.js"> </script>
+        <div class="footer">
+            <h1 style="text-align: center; color: black;">Tricky Facts</h1></a>
+                <a title="Checkout my youtube channel" style="text-align: center;color: black;" href="https://www.youtube.com/channel/UCOnQ51jkVg8J-Z3DdfxTnaA?view_as=subscriber" target="_blank"><h3>Visit my youtube channel</h3></a>
+                <a title="Visit my facebook page" style="text-align: center;color: black;" href="https://web.facebook.com/yourfriendwhilelearning" target="_blank"><h3>My facebook page</h3></a>
+                <a title="Join python programming point group" style="text-align: center;color: black;" href="https://web.facebook.com/groups/383337042672719" target="_blank"><h3>Join the python programming point group</h3></a>
+                <h3 style="text-align: center;color: black;">Have any question?</h3>
+                <a title="click emai your question" style="text-align: center;color: black;" href="mailto:thunderstorm01764@gmail.com" target="_blank"><h3>Email us</h3></a>
+                <a title="formspree form handler" style="text-align: center;color: black;" href="Formspree.io" target="_blank"><h3>Forms are handled by Formspree</h3></a>
+    
+        </div>
+    
+    </body>
+</html>

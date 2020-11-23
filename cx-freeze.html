@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>How to convert python scipt yo exe using cx_freeze</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="view port" content="width=device-width ,initial-scale=1, minimum-scale=1">
+        <meta name="keywords" content="cx_freeze, exe, python, convert">
+        <meta name="description" content="Learn how to convert python script to exe. Just write down a simple code and run in your tarminal that's it! It will automatically create an exe for your python script.">
+        <meta name="Developer" content="Nahid Khan">
+    </head>
+    <body>
+        <div id="top-header">
+            <h2 style="text-align: left; font-family: calibri; top: 100px; font-size: 30pt;float: left; top: -34px; position: relative; font-weight: 20; color: white; margin-left: 10px;">Tricky Facts</h2>
+            <a id="button" class="button" href="#">Ask question</a>
+            <a id="button2" class="button2" href="#">Comment</a>
+           
+        </div><br><br>
+        <h1 style="text-align: center; font-size: 25pt; font-weight: 10; font-family: calibri;">Tricky Facts</h1>
+        <div id="links">
+            <a href="https://trickyfacts.github.io" style="color:black; font-family:caliblri; margin:0;" title="Tricky facts home">Home</a>
+            <a href="https://trickyfacts.github.io/about" style="color: black; font-family: calibri; margin:0; word-spacing: 2pt; " title="about tricky facts">About us</a>
+            <a href="mailto:nahidkhan01764@outlook.com" style="color: black; font-family: calibri; margin:0; word-spacing: 2pt;" title="Email us to contacts us">Contact us</a>
+            <a href="https://trickyfacts.github.io/contribute" style="color: black; font-family: calibri; margin:0; word-spacing: 2pt; " title="Contribute to our website. send your content.">Contribute</a>
+        </div>
+        <center><img src="images/pw.png" alt="header" style="margin: auto; width: 90%;"></center><br><br>
+        <h1 style="font-family: calibri; text-align: center;">Your requested content is here</h1>
+
+        <div id="content"><div style="margin: 15pt;">
+            <h1 style="font-size: 30pt; font-family: calibri; color: black;">Convert python script to exe using cx_freeze</h1>
+                <p style="font-size: 15pt; font-family: calibri;">
+                   Hi guys! what's up. Welcome to Tricky Facts. In this article I am going to discuss how can you convert your python script to exe 
+                   using cx_freeze. So, continue reading!
+                </p>
+                <p style="font-size: 15pt; font-family: calibri;">
+                    First you have to install the cx_freeze module. To do that, open your tarminal (command prompt or powershell in windows) and then
+                    write <b style="color: antiquewhite;background-color: black;">pip install cx_freeze</b> and press enter like below.
+                    <center><img src="images/cx_tar.jpg" alt="tarminal view" hspace="10%" vspace="10"></center>  
+    
+                </p>
+                <p style="font-size: 15pt; font-family: calibri;">
+                    after finishing the installation you have to create a python code. Open your editor and create a new python file and name it something. For now we are using
+                    <i style="color:antiquewhite; background-color: black;">"setup.py"</i> and then see the code below.
+                </p>
+<pre style="background-color: black; width: max-content; font-size: 10pt; color: black;"><div style="margin: 20px;"><ol style="line-height: 10px; color: white;">
+    <li>from cx_freeze import setup ,Executable</li>
+    
+    <li>setup(</li>
+    <li>name="your exe name",</li>
+    <li>version="version of your exe",</li>
+    <li>description="description of your exe",</li>
+    <li>options={"build_exe":{"packages" :["enter packages you have used in python script"],</li>
+    <li>    "include_files":["Add your additional files here(<i>if you have any</i>)"],</li>
+    <li>    "include_msvcr:True"}}</li>
+    <li>executable=[Executable("your_python_script.py", icon="your exe icon path", base=base)]</li>
+    <li>)</li>
+
+
+</ol></pre></div>
+                <p style="font-size: 15pt; font-family: calibri;">
+                    First from cx_freeze module, we have to import "setup" and "Executable". We did that in line
+                    1.  
+                </p>
+                <p style="font-size: 15pt; font-family: calibri; margin: 15px;">
+                    in line 2, I've called setup(). Inside the parantheses or first brackets, I've written some options<br><ul type="square" style="font-size: 15pt; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin: 15px;color: black; line-height: 40pt;">
+                    <li><b style="color: black;"><i style="color:black;">name</i>: Here you have to write the name of your exe or application</b><br></li>
+                    <li><b style="color:black;"><i style="color:black;">version</i>: The version of your application or exe</b><br></li>
+                    <li><b style="color:black;"><i style="color:black;">options</i>: This is the most important part! this contains some options for building the exe</b></li>
+                    <li><b style="color:black;"><i style="color:black;">includes</i>: Here you have to write the name of the packages you have used in your main python script</b></li>
+                    <li><b style="color: black;"><i style="color: black;">include_files</i>: If you have any external files in your main script like images or anything else, you have to write the path of the files in this option</b></li>
+                    <li><b style="color: black;"><i style="color: black;">include_msvcr</i>: msvcr is the short form of "Microsoft Visual C++ Redistributable". You can add it in your exe in this option. It will already include the Redistributabe and user doesn't have to add it externally. It is a boolean value. If you want to add it,just set the value to True otherwise False </b></li>
+                    <li><b style="color: black;"><i style="color: black;">executable</i>: Well in this option we have to write the path of our main script and the path of our application icon. You also have to set the base of your exe</b></li>
+
+                </ul></p>
+                <p style="font-size: 15pt; font-family: calibri; margin: 15px;">
+                    Well, it's not all. There are a lot of commands and options in cx_frexe. Now I'll show you how can you can these by only one command line.
+                    Now, open your tarminal and write <i style="color:antiquewhite; background-color: black;">"setup.py --help"</i> and then press enter.
+                    after that you will see something like this.
+
+                    <center><img src="images/helppy.jpg" alt="tarminal view2"style="margin: auto; width: 90%;"></center>
+                    <i style="text-align: end; font-size: 10pt; font-family: verdana;float: right;">Windows powershell view</i>
+                </p>
+                <p style="font-size: 15pt; font-family: calibri; margin: 15px; color: black;">
+                    If you have seen something like this, just read it and apply it in code. You will learn more.
+                </p>
+                <p style="font-family: calibri; font-size: 15pt; color: black;">
+                    If you still didn't understand the article. You can watch my video below. 
+                </p>
+                <center><iframe src="https://www.youtube.com/embed/4K6UTRATDb8" height="315" width="420"></iframe></center>
+                
+                <h1 style="color: black;">Ask & Contribute</h1>
+                <p style="font-size: 15pt; font-family: calibri;"> if you have any question, don't hesitate to ask it. Email your question
+                    <a href="mailto:thunderstorm01764@gmail.com"><font color="black"><u>here</u></font></a> or you can just hit the "Ask question" button at the top of this page and we will be there to help you. You 
+                    can also contribute in this page by writting your own content. Just email your content <a href="mailto:nahidkhan01764@outlook.com" style="color:black;">here</a>. 
+                    Thanks for visiting my website.
+                </p>     
+       </div>
+    </div>
+    
+    <center>
+        <div style="height:400px ; width: 80%;">
+        <h3 style="font-family: calibri; font-weight: 10; text-align: left;">Recent contents</h3>
+        <div style="height: max-content; width: 210px; float: left; border: solid black 1pt;">
+            <a href="https://trickyfacts.github.io/How-to-convert-python-files-to-exe-using-auto-py-to-exe">
+            <div style="height: 170px; width: 210px; background-image: url(images/comp1.jpg); background-size: 100%;"></div>
+            <h3 style="font-family: calibri; margin: 3pt;font-weight: lighter; text-align: left; border-bottom: solid black 1pt; height: 70px;">How to convert .py files to. exe</h3>
+            <h3 style="font-family: calibri; font-weight: 10; text-align: left; height: max-content;">Date Created: 11 Nov 2020</h3>
+        </a>
+        </div>
+        <div style="height: max-content; width: 210px; float: left; border: solid black 1pt; margin-left: 10pt;">
+            <a href="https://trickyfacts.github.io/Intro-to-python-multithreading">
+            <div style="height: 170px; width: 210px; background-image: url(images/threading.png); background-size: 100%;"></div>
+            <h3 style="font-family: calibri; margin: 3pt;font-weight: lighter; text-align: left; border-bottom: solid black 1pt; height: 70px;">Intro to python threading</h3>
+            <h3 style="font-family: calibri; font-weight: 10; text-align: left; height: max-content;">Date Created: 11 Nov 2020</h3>
+        </a>
+        </div>
+    </div></center>
+    <center><div id="comment-box" style=" width: 100%; height: 450px; margin-bottom: 30pt; background-color: antiquewhite;padding-top: 10px;">
+        <form action="https://formspree.io/f/xvovqbpj" method="post" accept-charset="UTF-8">
+            <h1 style="font-family: segoe ui; font-weight: 10;">Leave a comment !</h1>
+            <input style="width: 800px; height: 40px;" id="email" name="text" type="text" placeholder="Write your name" />
+            <input style="width: 800px; height: 40px; margin-top: 10pt;" id="email" name="email" type="email" placeholder="Write your email" />
+            <textarea style="width: 800px; height: 150px; margin-top: 10pt; font-family: segoe ui;" class="comment" name="comment" type="text" placeholder="Comment"></textarea>
+            <input  style="width: 800px; height: 40px; margin-top: 10pt; color: white; background-color: black;" id="submit" name="submit" type="Submit" />
+        </form>
+
+    </div></center>
+    
+    <div class="bg-modal" style="display: none;">
+        <div class="modal-content">
+            <div class="close">+</div>
+            <form action="https://formspree.io/f/xvovqbpj" method="post" accept-charset="UTF-8">
+                <h2 style="font-family: segoe ui; font-weight: 10; text-align: center;">Ask any question</h2>
+                <input style="width: 80%; height: 40px;" id="email" name="text" type="text" placeholder="Write your name" />
+                <input style="width: 80%; height: 40px; margin-top: 10pt;" id="email" name="text" type="email" placeholder="Write your Email address" />
+                <textarea style="width: 80%; height: 100px; margin-top: 10pt; font-family: segoe ui;" class="comment" name="question" type="text" placeholder="Your question"></textarea>
+                <input  style="width: 80%; height: 40px; margin-top: 10pt; color: white; background-color: black;" id="submit" name="submit" type="Submit" />
+            </form>
+        </div>
+    </div>
+    <div class="bg-modal2" style="display: none;">
+        <div class="modal-content2">
+            <div class="close2">+</div>
+            <form action="https://formspree.io/f/xvovqbpj" method="post" accept-charset="UTF-8">
+                <h2 style="font-family: segoe ui; font-weight: 10; text-align: center;">Write a comment and help us improve</h2>
+                <input style="width: 80%; height: 40px;" id="email" name="text" type="text" placeholder="Write your name" />
+                <input style="width: 80%; height: 40px; margin-top: 10pt;" id="email" name="text" type="email" placeholder="Write your Email address" />
+                <textarea style="width: 80%; height: 100px; margin-top: 10pt; font-family: segoe ui;" class="comment" name="question" type="text" placeholder="Write your comment here"></textarea>
+                <input  style="width: 80%; height: 40px; margin-top: 10pt; color: white; background-color: black;" id="submit" name="submit" type="Submit" />
+            </form>
+        </div>
+    </div>
+    <script src="engine.js"> </script>
+    <div class="footer">
+        <h1 style="text-align: center; color: black;">Tricky Facts</h1></a>
+            <a style="text-align: center;color: black;" href="https://www.youtube.com/channel/UCOnQ51jkVg8J-Z3DdfxTnaA?view_as=subscriber" target="_blank"><h3>Visit my youtube channel</h3></a>
+            <a style="text-align: center;color: black;" href="https://web.facebook.com/yourfriendwhilelearning" target="_blank"><h3>My facebook page</h3></a>
+            <a style="text-align: center;color: black;" href="https://web.facebook.com/groups/383337042672719" target="_blank"><h3>Join the python programming point group</h3></a>
+            <h3 style="text-align: center;color: black;">Have any question?</h3>
+            <a style="text-align: center;color: black;" href="mailto:thunderstorm01764@gmail.com" target="_blank"><h3>Email us</h3></a>
+            <a style="text-align: center;color: black;" href="Formspree.io" target="_blank"><h3>Forms are handled by Formspree</h3></a>
+
+    </div>
+    
+    </body>
+</html>
