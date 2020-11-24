@@ -3,17 +3,17 @@
     <head>
         <title>Intro to multithreading in python</title>
         <link rel="stylesheet" href="style.css">
-        <link rel="Icon" href="Logo.png" type="png">
+        <link rel="Icon" href="images/Logo.png" type="png">
         <meta name="view port" content="width=device-width ,initial-scale=1, minimum-scale=1">
-        <meta name="keywords" content="threading, multithreading, python">
+        <meta name="keywords" content="threading, Leave a comment, ask any question,the threading module  ,multithreading, python, How to do multithreading in python, python multithreading, intro to python multithreading, run codes faster, use multiple cpus, trickyfacts, how to solve not responding problem, what is threading in python">
         <meta name="description" content="Run your code faster, smoother with multithreading. It will also prevent application not responding problem. So, what are you waiting for? checkout my content.">
         <meta name="Developer" content="Nahid">
     </head>
     <body>
         <div id="top-header">
             <h2 style="text-align: left; font-family: calibri; top: 100px; font-size: 30pt;float: left; top: -34px; position: relative; font-weight: 20; color: white; margin-left: 10px;">Tricky facts</h2>
-            <a id="button" class="button" href="#">Ask question</a>
-            <a id="button2" class="button2" href="#">Comment</a>
+            <a id="button" class="button" href="#" title="Ask any question">Ask question</a>
+            <a id="button2" class="button2" href="#" title="write a comment about our website and help us to improve">Comment</a>
            
         </div><br><br>
         <h1 style="text-align: center; font-size: 25pt; font-weight: 10; font-family: calibri;">Tricky facts</h1>
@@ -37,13 +37,19 @@
                 Like imagine you have made a code which prints "Hello" five times and prints "World" five times. and you have added them in two different
                 functions. Like below
             </p>
-            <center><img src="images/thread-code.jpg" alt="A simple python code which prints Hello and world 5 times" style="margin: auto;"></center>
+            <div style="text-align: center;">
+                <img src="images/thread-code.jpg" alt="A simple python code which prints Hello and world 5 times">
+                <h2 style="font-family: calibri; font-size: 15pt; color: blue;"><i>Fig1:The code where I didn't use threading</i></h2>
+            </div>
             <p style="font-size: 15pt; font-family: calibri;">
                 Here your computer has to do two tasks one is printing "Hello" for five times and printing "World" for five times. Each of these tasks are called
                 thread. Our computer always handling a lot of threads. Like if you open your task manager you can see How many threads your computer is handling.
             </p>
-            <center><img src="images/task_manager.jpg" alt="Task manager view where you will find how many threads your pc is handling"></center>
-            <p style="font-size: 15pt; font-family: calibri;">
+            <div style="text-align: center;">
+                <img src="images/task_manager.jpg" alt="Task manager view where you will find how many threads your pc is handling" style="border: solid black 1pt;">
+                <h2 style="font-family: calibri; font-size: 15pt; color: blue;"><i>Fig2: The red circle indicates  how many threads is being handled</i></h2>
+            </div>
+                <p style="font-size: 15pt; font-family: calibri;">
                 Like in my computer, it is handling 2250 threads! Nowadays we have multicore cpus. It means we have more than one core in our cpu.
                 You can also find it in your task manager. In my computer, I have 4 cores in my cpu.  
             </p>
@@ -57,24 +63,36 @@
                 To do multithreading, we are going to use a module named "threading". It is a built in module in python. So you don't have to install it.
                 Now take a look at this code below. 
             </p>
-            <center><img src="images/thread-code2.jpg" alt="A python code where I used threading"></center>
+            <div style="text-align: center;">
+                <img src="images/thread-code2.jpg" alt="A python code where I used threading in python">
+                <h2 style="font-family: calibri; font-size: 15pt; color: blue;"><i>Fig3: The code where I used threading</i></h2>
+            </div>
             <p style="font-size: 15pt; font-family: calibri;">
                 Now first run the code without thraeding (showed at begining). Then run the code above. See outputs.
             </p>
-            <center><img src="images/tout.png" alt="Compare two codes, one with thread and one without thread"></center>
+            <div style="text-align: center;">
+                <img src="images/compare_between_threading_and_none_threading.png" alt="Compare two codes, one with thread and one without thread">
+               
+            </div>
             <p style="font-size: 15pt; font-family: calibri;">
                 In the left picture (the one we used threading), it printed "Hello" and then after one "Hello" , it printed "world". In the right(without threading)
                 it printed "Hello" five times and after five "Hello" it printed "world" five times. So, hello() and world() function were running parallely.
                 It means hello() function was running on processor1 and world() function was running on processor2.
             </p>
-            <center><img src="images/thread-dia.png" alt="This is how thread works"></center>
+            <div style="text-align: center;">
+                <img src="images/thread-diagram.png" alt="This is how thread works">
+                <h2 style="font-family: calibri; font-size: 15pt; color: blue;"><i>Fig4: This is how multithreading works</i></h2>
+            </div>
             <p style="font-size: 15pt; font-family: calibri;">
                 You will also notice that I have used "time" module in 
                 my code. Well don't worry about it. I used it to slower code execution process using "time.sleep()" because our cpu is really fast and it will execute the code so fast that 
                 you will not understand what is actually happening. Now I am going to show you some important stuffs of threading module.
             </p>
             <h2 style="font-size: 30pt; font-family: calibri; color: black;">The threading module</h2>
-            <center><img src="images/thread-code2.jpg" alt="Python code with thread" style="margin: auto;"></center>
+            <div style="text-align: center;">
+                <img src="images/thread-code2.jpg" alt="Python code with thread" style="margin: auto;">
+                <h2 style="font-family: calibri; font-size: 15pt; color: blue;"><i>Fig5: Check the code again (The one with threading)</i></h2>
+            </div>
             <p style="font-size: 15pt; font-family: calibri;">
                 <ul style="font-size: 15pt; font-family: calibri;">
                 in my previous code (the code where I used threading module) I've showed how I used the threading module. Now I am going describe it.<br>
@@ -120,7 +138,7 @@
         <center><div id="comment-box" style=" width: 100%; height: 450px; margin-bottom: 30pt; background-color: antiquewhite;padding-top: 10px;">
             <form action="https://formspree.io/f/xvovqbpj" method="post" accept-charset="UTF-8">
                 <h1 style="font-family: segoe ui; font-weight: 10;">Leave a comment !</h1>
-                <input style="width: 800px; height: 40px;" id="email" name="text" type="text" placeholder="Write your name" />
+                <input style="width: 800px; height: 40px;" id="name" name="text" type="text" placeholder="Write your name" />
                 <input style="width: 800px; height: 40px; margin-top: 10pt;" id="email" name="email" type="email" placeholder="Write your email" />
                 <textarea style="width: 800px; height: 150px; margin-top: 10pt; font-family: segoe ui;" class="comment" name="comment" type="text" placeholder="Comment"></textarea>
                 <input  style="width: 800px; height: 40px; margin-top: 10pt; color: white; background-color: black;" id="submit" name="submit" type="Submit" />
