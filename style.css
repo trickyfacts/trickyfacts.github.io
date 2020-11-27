@@ -1,5 +1,5 @@
 body{
-    zoom: 100%;
+    
     margin: 0;
     padding: 0;
     border: 0;
@@ -34,8 +34,9 @@ a{
 #links{
     height: 5%;  
     text-align: center; 
-    word-spacing: 28pt; 
+    width: 100%;
     font-size: 15pt; 
+    word-spacing: 28pt;
     top: -8pt; 
     color: white;
     margin: auto;
@@ -71,11 +72,16 @@ a{
     margin-right: 10px;
     cursor: pointer;
 }
+.button3{
+    display: none;
+    
+}
+
 .bg-modal{
     width: 100%;
     height: 100%;
     background-color:rgb(0,0,0,0.7);
-    position: absolute;
+    position: fixed;
     top: 0;
     display: flex;
     justify-content: center;
@@ -103,7 +109,7 @@ a{
     width: 100%;
     height: 100%;
     background-color:rgb(0,0,0,0.7);
-    position: absolute;
+    position: fixed;
     top: 0;
     display: flex;
     justify-content: center;
@@ -127,19 +133,47 @@ a{
     transform: rotate(45deg);
     cursor: pointer;
 }
-
+.close3{
+    position: absolute;
+    top: 0;
+    color: black;
+    font-size: 40px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
 #top-header{
     width: 100%; 
     height: 50px; 
-    background-color: blueviolet; 
+    background-color: #8a2be2; 
     text-align: right;  
     position: fixed;
     max-height: 50px;
     min-height: 50px;
 }
-
+.navbar{
+    width: 50%;
+    height: 100%;
+    background-color:white;
+    position: fixed;
+    top: 50px;
+    display: none;
+    right: 0;
+}
+.head1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#comment-box{
+    display: none;
+}
+.frame{
+    height: 315px;
+    width: 40%;
+}
 @media screen and (max-width: 992px){
     
+    .image{
+        width: 90%;
+    }
    
     #content{
         display: block;
@@ -157,18 +191,29 @@ a{
         text-align: center; 
         word-spacing: 28pt; 
         font-size: 15pt; 
-        position: relative; 
+        position: static; 
         top: -8pt; 
         color: white;
         margin: auto;
     }
     .modal-content{
         width: 90%;
-        height: 30%;
+        height: max-content;
         background-color: white;
         border-radius: 4px;
         text-align: center;
         position: relative;
+        zoom: 100%;
+        padding-bottom: 30pt;
+    }
+    .modal-content2{
+        width: 90%;
+        height: max-content;
+        background-color: white;
+        border-radius: 4px;
+        text-align: center;
+        position: relative;
+        padding-bottom: 30pt;
     }
     #email{
         border: solid black 1pt;
@@ -188,5 +233,44 @@ a{
         border: solid black 1pt;
         margin: 0 auto;
     }
-    
+    .button{
+        display: none;
+    }   
+    .button2{
+        display: none;
+    }
+    #head-image{
+        display: none;
+    }
+    #last-contents{
+        display: none;
+    }
+    .button3{
+        display: block;
+        
+    }
+    .navbar{
+        width: 50%;
+        height: 100%;
+        background-color:white;
+        position: fixed;
+        top: 50px;
+        display: none;
+        right: 0;
+        border: solid black 1pt;
+        background-color: antiquewhite;
+        font-family: calibri;
+    }
+    #links{
+        word-spacing: 9pt;
+    }
+    #comment-box{
+        display: block;
+    }
+    .code{
+        width: 90%;
+    }
+    .frame{
+        width: 100%;
+    }
 }
