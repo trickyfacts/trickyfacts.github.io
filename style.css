@@ -273,4 +273,9 @@ a{
     .frame{
         width: 100%;
     }
+    #content{
+        width: 100%;
+        background-color: white;
+        border: none;
+    }
 }
