@@ -9,32 +9,37 @@
 
 <url>
   <loc>https://trickyfacts.github.io/</loc>
-  <lastmod>2020-11-29T07:29:28+00:00</lastmod>
+  <lastmod>2020-12-09T15:19:04+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://trickyfacts.github.io/about</loc>
-  <lastmod>2020-11-29T07:29:28+00:00</lastmod>
+  <lastmod>2020-12-09T15:19:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://trickyfacts.github.io/contribute</loc>
-  <lastmod>2020-11-29T07:29:28+00:00</lastmod>
+  <lastmod>2020-12-09T15:19:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://trickyfacts.github.io/How_to_convert_python_files_to_exe_using_auto_py_to_exe</loc>
-  <lastmod>2020-11-29T07:29:28+00:00</lastmod>
+  <lastmod>2020-12-09T15:19:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://trickyfacts.github.io/How_to_convert_python_files_to_exe_using_cx_freeze_module</loc>
-  <lastmod>2020-11-29T07:29:28+00:00</lastmod>
+  <lastmod>2020-12-09T15:19:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://trickyfacts.github.io/Intro_to_python_multithreading</loc>
-  <lastmod>2020-11-29T07:29:28+00:00</lastmod>
+  <lastmod>2020-12-09T15:19:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://trickyfacts.github.io/setup%20django%20for%20building%20your%20own%20website</loc>
+  <lastmod>2020-12-09T15:19:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
