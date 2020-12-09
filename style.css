@@ -154,7 +154,7 @@ a{
     min-height: 50px;
 }
 .navbar{
-    width: 50%;
+    width: 70%;
     height: 100%;
     background-color:white;
     position: fixed;
@@ -277,7 +277,7 @@ a{
         
     }
     .navbar{
-        width: 50%;
+        width: 70%;
         height: 100%;
         background-color:white;
         position: fixed;
